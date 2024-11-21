@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="maincss.css">
+    <!--insert font awesome icon CDN link here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Training</title>
+    
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family:'Poppins',sans-serif;
+            box-sizing: border-box;
+            outline: none;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        :root{
+            --prime: #00ff34;
+        }
+        body{
+            background-color:#222;
+        }
+        
+        .bgcolor{
+         transition: all 1s; 
+         background-color:black;
+         color: white;
+         border-bottom: 1px solid lightgray  ;
+        }
+
+        .logo{
+            font-size: 2.8em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .logo B{
+            color: var(--prime);
+        }
+        ol{
+            display: flex;
+            margin: auto 0;
+        }
+        ol li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        ol li a{
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        ol li:hover a{
+            color: var(--prime);
+        }
+
+       
+        /*---common size for all section---*/
+        .view{
+            
+            width: 100%;
+            min-height: 80vh;
+            position: relative;
+        }
+        /*---------Style Home Section--------------*/
+        .home{
+            display:flex;
+            min-height: 120vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+       
+        .banner{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top:85px;
+            bottom: 0;
+            right: 0;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(100%);
+        }
+        @media(min-aspect-ratio:16/9){
+            .banner .back-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media(max-aspect-ratio:16/9){
+            .banner .back-video{
+                width: auto;
+                height: 100%;
+            }
+        }
+        
+        .highlights{
+            width: 70%;
+            position: relative;
+            display: inline-block;
+            z-index: 11;
+        }
+        .highlights h3{
+            display: inline;
+            font-size: 2vw;
+            padding: 5px 20px;
+            font-weight:bolder;
+            text-transform: capitalize;
+            border-left: 6px solid var(--prime);
+        }
+        .highlights h1{
+            font-size: 5vw;
+            text-align: center;
+            font-weight: normal;
+        }
+        .highlights b{
+            color: var(--prime);
+            font-weight: 800;
+        }
+        .highlights .tagline{
+            color: #d7d7d7;
+            font-size: 1.2vw;
+            text-align: center;
+            font-weight: normal;
+        }
+        .highlights .join{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight:800;
+            padding: 5px 20px;
+            font-size: 1.5vw;
+            margin-top: 1.2em;
+            color: var(--prime);
+            border: 2px solid var(--prime);
+            border-radius: 50px;
+            background: transparent;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+        .highlights .join a{
+            text-decoration: none;
+        }
+        .highlights .join:hover{
+            color: #fff;
+            cursor: pointer;
+            letter-spacing: 1.5px;
+            background: var(--prime);
+        }
+        /*----common styles for all section----*/
+        .main{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .main h2{
+            font-size: 2.5vw;
+            position: relative;
+            text-align: center;
+            padding-top: 100px;
+            display: inline-block;
+        }
+        span{
+            color: var(--prime);
+        }
+        .main h2:before{
+            position: absolute;
+            content:'';
+            background: var(--prime);
+            height: 3px;
+            width: 30%;
+            right: -15px;
+            bottom: 0;
+            border-radius: 50px;
+        }
+        .main h6{
+            margin-top: 10px;
+            font-size: 13px;
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+        .content{
+            position: relative;
+            display: flex;
+            width: 100%;
+            padding: 0 30px;
+            justify-content: center;
+        }
+        
+        /*--------------style tutorials section----------------*/
+        .tutorials .content{
+            flex-wrap: wrap;
+        }
+        .tutorials .content .frame{
+            position: relative;
+            width: 500px;
+            padding: 30px 30px 40px 30px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            background:black;
+        }
+        .tutorials .content .frame .box{
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .tutorials .content .frame .box img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.2s ease-in;
+            filter: brightness(75%);
+        }
+        .tutorials .content .frame .box:hover img{
+            filter: brightness(100%);
+            transform: scale(1.08);
+        }
+        .tutorials .content .frame .headline{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .tutorials .content .frame .headline i{
+            height: 22px;
+            width: 22px;
+            border: 1.5px solid #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            line-height: 22px;
+        }
+        .tutorials .content .frame .headline i:hover{
+            border: 1.5px solid var(--prime);
+            background: var(--prime);
+        }
+        .tutorials .content .frame .headline .title{
+            color: var(--prime);
+            font-size: 1.6em;
+        }
+        .tutorials .content .frame p{
+            font-size: 1em;
+            position: relative;
+            bottom: 5px;
+        }
+        .tutorials .content .frame a{
+            top: 20px;
+            color: var(--prime);
+            background: transparent;
+            padding: 5px 20px;
+            border: 1.5px solid var(--prime);
+            border-radius: 5px;
+            text-decoration: none;
+            position: relative;
+            text-transform: capitalize;
+            transition: 0.2s ease;
+        }
+        .tutorials .content .frame a:hover{
+            color: #fff;
+            background: var(--prime);
+        }
+        /*------------style protips section--------------*/
+
+
+        .tips .content{
+            flex-direction: column;
+        }
+        .tips .content .row{
+            display: flex;
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            justify-content: center;
+        }
+        .tips .content .row:nth-child(odd) .a{
+            order: 2;
+        }
+        .tips .content .row .cols{
+            position: relative;
+            width: 600px;
+            padding: 20px 50px;
+        }
+        .tips .content .row .cols .heading{
+            font-size: 2em;
+            color: #ff8502;
+            text-transform: capitalize;
+        }
+        .tips .content .row:nth-child(odd) .cols .heading{
+            color: #02a3ff;
+        }
+        .tips .content .row .cols .boxes{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+        .tips .content .row .cols .boxes img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .tips .content .row .cols p{
+            font-size: 1em;
+            
+        }
+        /*------------------make responsive-------------------*/
+         /* Add responsive styles for smaller screens */
+    @media screen and (max-width: 900px) {
+        .logo {
+            font-size: 2em;
+        }
+
+        /* Adjust the font size and padding for the navigation links */
+        ol li a {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+
+        /* Adjust the size of the banner video */
+        .banner .back-video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Adjust the font size and padding for the highlights section */
+        .highlights h3 {
+            font-size: 3vw;
+            padding: 5px 10px;
+            border-left: 3px solid var(--prime);
+        }
+
+        .highlights h1 {
+            font-size: 12vw;
+        }
+
+        .highlights .join {
+            font-size: 1.8vw;
+            border: 1px solid var(--prime);
+        }
+
+        /* Adjust the font size for the main headings and paragraphs */
+        .main h2 {
+            font-size: 1.5rem;
+        }
+
+        .main h6 {
+            font-size: 10px;
+        }
+
+        
+
+        /* Adjust the size of the tutorial frames */
+        .tutorials .content .frame {
+            width: 350px;
+            padding: 15px;
+            margin: 10px 5px;
+        }
+
+        /* Adjust the font size and padding for the tutorial links */
+        .tutorials .content .frame a {
+            font-size: 12px;
+            padding: 3px 10px;
+        }
+
+        /* Adjust the size of the pro tips section */
+        .tips .content .row .cols .boxes {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* Add styles for the sign-up form on smaller screens */
+        .signup-form {
+            width: 100%;
+            right: 0;
+            top: 60px;
+        }
+
+        .signup-form .box {
+            width: 100%;
+            font-size: 14px;
+            padding: 0.8rem 0;
+        }
+
+        .signup-form .btn {
+            width: 80%;
+        }
+    }
+    
+/*-------------------------------Sign-up form------------------*/
+
+  .signup-form {
+    position: absolute;
+    top: 100%; 
+    right: 2rem;
+    width: 25rem; 
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    display: none;
+  }
+
+  .signup-form.active {
+    display: block;
+    animation: fadeIn 0.4s linear;
+  }
+
+  .signup-form h3 {
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .signup-form .box {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-width: 0.1rem;
+    padding: 1rem 0; 
+    font-size: 1rem; 
+    color: black;
+    text-transform: none;
+    margin: 1rem 0;
+  }
+
+  .signup-form .btn {
+    width: 90%;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px 50px 50px 50px;
+  }
+
+  .signup-form .btn:hover {
+    background-color: #111;
+    color: white;
+  }
+
+    
+    </style>
+    
+</head>
+<body>
+    
+ <!-- header section starts -->
+ <header id='header' class="header">
+
+
+    <a href="index.html" class="logo">
+        <img src="lo.png" alt="Logo" width="30" height="35"> 
+        &nbsp;Elite<span>&nbsp;X</span>
+    </a>
+
+
+    <nav id='navbar' class="navbar">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="training.html">Training</a>
+            </li>
+         <li><a href="membership.html">Membership</a></li>
+         <li><a href="tutorial.html">Tutorials</a></li>
+         <li><a href="Shop.html">Store</a>
+            
+         </li>
+         <li><a href="aboutus.html">About</a></li>
+         <li><a href="contactus.html">Contact</a></li>
+        </ul>
+     </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+       
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <form action="process_signin.php" method="post" class="login-form">
+        <h3>Sign In</h3>
+        <input type="email" name="email" placeholder="Enter your email" class="box" required>
+        <input type="password" name="password" placeholder="Enter your password" class="box" required>
+        <div class="remember">
+            <input type="checkbox" name="remember_me" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <input type="submit" value="Sign In" class="btn">
+        <div class="links">
+            <a href="#">Forgot password</a>
+            <a href="#">Sign up</a>
+        </div>
+    </form>
+
+
+<!-- sign-up section starts -->
+  
+    <form action="process_signup.php" method="post" class="signup-form" style="display: none;">
+      <h3>Sign Up</h3>
+      <input type="text" name="name" placeholder="Enter your name" id="" class="box" required>
+      <input type="email" name="email" placeholder="Enter your email" id="" class="box" required>
+      <input type="text" name="nic_number" placeholder="Enter your NIC number" id="" class="box" required>
+      <input type="password" name="password" placeholder="Enter your password" id="" class="box">
+      <input type="submit" value="Sign Up" class="btn">
+    </form>
+
+ </header>
+
+<!--------------------------------Home Section----------------------------->
+<section id="home" class="home view">
+    <div class="highlights">
+        
+        <h3>give yourself a target</h3>
+        <h1>Train <b>with us</b></h1><br>
+        <p class="tagline">
+            "Join the journey and train with us to reach new destinations!"
+        </p>
+        <button class="join"><a href="#tutorials">explore</a></button>
+    </div>
+    <div class="banner">
+       
+    </div>
+</section>
+
+<!------------------------------Tutorials section-------------------------------->
+<section id="tutorials" class="tutorials view">
+    <div class="main">
+        <h2><span>O</span>ur Trainings</h2>
+    </div>
+    <div class="content">
+        <div class="frame">
+            <div class="box">
+                <img src="images/hardabs.jpeg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">Hard Abs</div>
+                        
+            </div>
+            <p>Carve Your Core: Effective Abs Workout with expert trainers</p>
+            <a href="training.html">Start now</a>
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="images/cardio.avif" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">Cardio Training</div>
+                        
+            </div>
+            <p>Rev up your heart and train with us for an unbeatable cardio experience!</p>
+            <a href="training.html">Start now</a>
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="images/personal.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">Personal Training</div>
+                        
+            </div>
+            <p>Unlock your full potential with personalized guidance - train with us for transformative results!</p>
+            <a href="training.html">Start now</a>
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="images/strenghth.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">Strength Training</div>
+                        
+            </div>
+            <p>Unleash your power and train with us for unmatched strength gains!</p>
+            <a href="training.html">Strat now</a>
+        </div>
+        
+        </div>       
+    </div>
+</section>
+
+<!------------------------------------Pro Tips Section--------------------------------------->
+<section id="tips" class="tips view">
+    <div class="main">
+        <h2><span>B</span>uild<span> Y</span>our<span> D</span>ream<span> B</span>ody</h2>
+    </div>
+    <div class="content">
+        
+        <div class="row">
+            <div class="cols a">
+                
+                <p>Welcome to our EliteX fitness center where you'll train with our expert coaches to sculpt the body you've always dreamed of. Our personalized programs are designed to cater to your specific goals and abilities, ensuring every session is optimized for maximum results. Whether you're a beginner or a seasoned fitness enthusiast, our dedicated team will guide and motivate you every step of the way, unlocking your true potential and helping you achieve a level of strength and confidence you never thought possible. Join us today, and let's build your dream body together!</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="tip3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-----------   Footer section start  ------->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a class="links" href="index.html">Home</a>
+            <a class="links" href="training.html">Train With Us</a>
+            <a class="links" href="Shop.html">Store</a>
+            <a class="links" href="membership.html">Membership</a>
+            <a class="links" href="tutorial.html">Tutorials</a>
+            <a class="links" href="Aboutus.html">About US</a>
+         </div>
+
+         <div class="box">
+            <h3>Opening hours</h3>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>Closed</i></p>
+        </div>
+        <div class="box">
+            <h3>Opening hours</h3>
+            <p><i class="fas fa-phone"></i>0111234567</p>
+            <p><i class="fas fa-phone"></i>0705654549</p>
+            <p><i class="fas fa-envelope"></i>elitexfitnesscenter@gmail.com</p>
+            <p><i class="fas fa-map"></i>Colombo 07,Sri Lanka</p>
+            <div class="share">
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-facebook-f"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-twitter"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-linkedin"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-pinterest"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <form action="">
+                <input type="email" name="" class="email" placeholder="Enter your email" id="">
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+        </div>
+    </div>
+</section>
+<div class="credit">Created by <span>Csboys</span>| Copyright © EliteXFitnessCenter 2023. All right reserved.</div>
+<!-----------   Footer section END ------->
+
+<script>
+    function changeBg(){
+       var navbar =document.getElementById('header');
+       var scrollValue=window.scrollY;
+       if(scrollValue<150){
+           navbar.classList.remove('bgcolor');
+       }
+       else{
+           navbar.classList.add('bgcolor')
+       }
+    }
+   window.addEventListener('scroll',changeBg); 
+
+</script>
+
+
+<script>
+    function showAlert() {
+      // Show the alert pop-up
+      alert("Your details recorded");
+    }
+  </script>
+  
+  
+  <!------------------sign-up js part ------------>
+  
+  <script>
+
+
+    const loginForm = document.querySelector('.login-form');
+    const signUpForm = document.querySelector('.signup-form');
+    const links = document.querySelector('.links');
+
+    function toggleForms(event) {
+        event.preventDefault();
+        loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+        signUpForm.style.display = signUpForm.style.display === 'none' ? 'block' : 'none';
+    }
+
+    links.addEventListener('click', toggleForms);
+
+    // Close the form after successful form submission
+    const signUpFormElement = document.querySelector('.signup-form');
+
+    signUpFormElement.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const formData = new FormData(signUpFormElement);
+
+        fetch('process_signup.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle successful form submission
+                window.location.href = 'thank_you_page.html'; // Redirect to process_signup.php
+                signUpFormElement.reset(); // Clear form inputs
+                signUpFormElement.style.display = 'none'; // Hide the form after successful submission
+            } else {
+                // Handle form submission error
+                console.error('Error occurred during sign up.');
+            }
+        })
+        .catch(error => {
+            console.error('Error occurred during sign up:', error);
+        });
+    });
+
+    // Get the login button element
+    const loginButton = document.getElementById('login-btn');
+
+    // Add a click event listener to the login button
+    loginButton.addEventListener('click', function() {
+        // Toggle the login form
+        loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+        // Hide the signup form when showing the login form
+        signUpForm.style.display = 'none';
+    });
+</script>
+
+ 
+
+<!--  Swipper js file-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!--  Custom js file link  -->    
+<script>
+
+    let searchForm =document.querySelector('.search-form');
+    
+    document.querySelector('#search-btn').onclick=()=>{
+        searchForm.classList.toggle('active');
+        navbar.classList.remove('active');
+        loginForm.classList.remove('active');
+    }
+    
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick=()=>{
+        navbar.classList.toggle('active');
+        searchForm.classList.remove('active');
+        loginForm.classList.remove('active');
+    }
+    
+    
+    
+    window.onscroll = () =>{
+        searchForm.classList.remove('active');
+        navbar.classList.remove('active');
+    };
+    
+    window.onscroll = () =>{
+        menu.classList.remove('active');
+        navbar.classList.remove('active');
+    };
+    
+    
+    
+    var swiper = new Swiper(".home-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    
+    
+      var swiper = new Swiper(".review-slider", {
+        spaceBetween: 20,
+        grabCursor:true,
+        loop:true,
+        autoplay:{
+          delay: 7500,
+          disableOnInteraction:false,
+        },
+        breakpoints:{
+          0:{
+            slidesPerView:1,
+          },
+          600:{
+            slidesPerView:2,
+          }
+        }
+          
+       
+      });
+    
+    </script>
+
+
+</body>
+
+
+
+
+
+</html>

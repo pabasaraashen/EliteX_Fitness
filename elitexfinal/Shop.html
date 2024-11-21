@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="shopcss.css">
+    <!--insert font awesome icon CDN link here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Store</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black
+    ;
+    color: rgb(255, 255, 255);
+}
+section{
+    padding: 2rem 9%;
+}
+
+.bgcolor{
+         transition: all 1s; 
+         background-color:black;
+         color: white;
+         border-bottom: 1px solid lightgray  ;
+}
+    
+.shop{
+    padding-top: 85px;
+   
+}
+.top{
+    background-color: #333;
+    height: 60px;
+    width: 100%;
+    font-size:18px;
+    text-align: center;  
+    font-weight: bolder;
+}
+    
+
+.top ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    height: 10px;
+
+
+}
+
+.top li {
+    margin: 0;
+    padding: 0;
+}
+
+.top a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.top a:hover {
+    background-color:#39ff14;
+}
+/* Dropdown Style */
+.dropdown-contenth {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-contenth a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdownh:hover .dropdown-contenth {
+    display: block;
+}
+
+
+.flex-container {
+    display: flex;
+    height: 650px; /* Set the height to your desired value (e.g., 200px) */
+}
+
+.c1 {
+    flex: 1;
+    padding: 20px;
+    background-color: #000000; /* Background color for column 1 */
+    font-size: 35px;
+    color: #39ff14;
+}
+
+.c2 {
+    flex: 2;
+    padding: 20px;
+    background-color: #000000; /* Background color for column 2 */
+}
+
+.c2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ffffff;
+    height: 600px;
+    width: 1000px;
+}
+.flex-container2 {
+    display: flex;
+    height: 650px; /* Set the height to your desired value (e.g., 200px) */
+}
+
+.flex-container3 {
+    display: flex;
+    height: 650px;
+}
+
+.c4 {
+    flex: 1;
+    padding: 20px;
+    background-color: #000000; /* Background color for column 1 */
+    font-size: 35px;
+}
+
+.c3 {
+    flex: 2;
+    padding: 20px;
+    background-color: #000000; /* Background color for column 2 */
+}
+
+.c3 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #f2efef;
+    height: 600px;
+    width: 1000px;
+}
+table {
+    margin: 20px auto; /* To center the table horizontally */
+    border-collapse: collapse;
+    table-layout: fixed; /* Divide the table into equal width columns */
+    width: 100%; /* Optional - adjust the table width as needed */
+}
+.content1{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    background-color: #ffffff; /* Change the background color of the table */
+}
+
+td {
+    padding: 10px;
+    border: 0cap solid #ffffff;
+}
+td.column1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #39ff14;
+}
+td.column2 {
+    font-size: 19px;
+}
+.content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button.custom-button {
+    background-color: #39ff14;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.custom-button:hover {
+    background-color: rgb(0, 0, 251);
+}
+
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    flex-basis: calc(25% - 20px);
+    margin:10px;
+    border: 1px solid #45a049;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.card :hover{
+    transform: scale(1.2);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color:#39ff14;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.footer-line {
+    border: none;
+    border-top: 0.5px solid #ccc;
+    height: 0.5px;
+    margin: 20px 0;
+}
+
+.browse-more h2 {
+    font-size: 60px; /* Change the text size */
+    margin: 50px 0; /* Add some margin for spacing */
+
+}
+h1 {
+    text-align: center;
+    font-size: 55px; /* Change the heading font size */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    color: #39ff14;
+}
+
+p {
+    text-align: center;
+    font-size: 18px; /* Change the paragraph font size */
+    margin-bottom: 30px; /* Add spacing below the paragraph */
+}
+h2{
+    color: #39ff14;
+}  
+.store-image {
+    display: block;
+    max-width: 800px; /* Adjust the image width as needed */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 5px;
+}
+
+.full-width-image {
+    display: block;
+    width: 100%; /* Set the image width to 100% to span the entire container */
+    height: auto; /* Adjust the height to maintain the aspect ratio */
+    margin: 20px 0; /* Add margin above and below the image */
+    border-radius: 5px;
+}
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 200px; /* Set the initial image size */
+    height: 200px; 
+    margin: 10px; 
+    border-radius: 5px;
+    transition: transform 0.3s; /* Add a smooth transition on hover */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.2); /* Apply the zoom effect on hover */
+}
+
+.centered-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.cd {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.cd img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cd h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cd p {
+    font-size: 16px;
+}
+
+
+.contentHG{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/img81.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    
+
+    nav {
+        
+        height: 60px;
+    }
+
+
+    ul {
+        justify-content: space-around; /* Adjust the alignment of the navigation links */
+    }
+
+ 
+    section {
+        padding: 2rem 5%; /* Decrease the padding for sections on smaller screens */
+    }
+
+    .c2 img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .cards-container {
+        flex-direction: column; 
+    }
+
+
+    .card {
+        flex-basis: 100%; 
+        margin: 10px 0; 
+    }
+
+    .browse-more {
+        margin-top: 20px; /* Add some spacing at the top */
+    }
+
+   
+    .browse-more .card {
+        flex-basis: 100%; 
+        margin: 10px 0; 
+    }
+
+}
+
+
+/*-------------------------------Sign-up form------------------*/
+
+.signup-form {
+    position: absolute;
+    top: 100%; 
+    right: 2rem;
+    width: 25rem; 
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    display: none;
+  }
+
+  .signup-form.active {
+    display: block;
+    animation: fadeIn 0.4s linear;
+  }
+
+  .signup-form h3 {
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .signup-form .box {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-width: 0.1rem;
+    padding: 1rem 0; 
+    font-size: 1rem; 
+    color: black;
+    text-transform: none;
+    margin: 1rem 0;
+  }
+
+  .signup-form .btn {
+    width: 90%;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px 50px 50px 50px;
+  }
+
+  .signup-form .btn:hover {
+    background-color: #111;
+    color: white;
+  }
+
+</style>
+</head>
+<body>
+<!-- header section starts -->
+<header id='header' class="header">
+
+    <a href="index.html" class="logo">
+        <img src="lo.png" alt="Logo" width="30" height="35">
+        &nbsp;Elite<span>&nbsp;X</span>
+    </a>
+
+    <nav id='navbar' class="navbar">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="training.html">Training</a>
+            </li>
+         <li><a href="membership.html">Membership</a></li>
+         <li><a href="tutorial.html">Tutorials</a></li>
+         <li><a href="Shop.html">Store</a>
+            
+         </li>
+         <li><a href="aboutus.html">About</a></li>
+         <li><a href="contactus.html">Contact</a></li>
+        </ul>
+     </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <form action="process_signin.php" method="post" class="login-form">
+        <h3>Sign In</h3>
+        <input type="email" name="email" placeholder="Enter your email" class="box" required>
+        <input type="password" name="password" placeholder="Enter your password" class="box" required>
+        <div class="remember">
+            <input type="checkbox" name="remember_me" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <input type="submit" value="Sign In" class="btn">
+        <div class="links">
+            <a href="#">Forgot password</a>
+            <a href="#">Sign up</a>
+        </div>
+    </form>
+
+
+<!-- sign-up section starts -->
+  
+    <form action="process_signup.php" method="post" class="signup-form" style="display: none;">
+      <h3>Sign Up</h3>
+      <input type="text" name="name" placeholder="Enter your name" id="" class="box" required>
+      <input type="email" name="email" placeholder="Enter your email" id="" class="box" required>
+      <input type="text" name="nic_number" placeholder="Enter your NIC number" id="" class="box" required>
+      <input type="password" name="password" placeholder="Enter your password" id="" class="box">
+      <input type="submit" value="Sign Up" class="btn">
+    </form>
+
+ </header>
+
+
+    <section class="shop">
+        <div class="top">
+<nav>
+        <ul>
+            <li><a href="Treadmiles.html">Treadmiles</a></li>
+            <li><a href="Bikes.html">Bikes</a></li>
+            <li><a href="Tools.html">Tool</a></li>
+            <li><a href="Homegym.html">Home Gym</a></li>
+            <li class="dropdownh"><a href="Supplements.html">Supplements</a>
+                <div class="dropdown-contenth">
+                    <a href="Supplements.html">MASS GAINER</a>
+                    <a href="proteins.html">PROTEINS</a>
+                    <a href="Vitamins.html">Vitamins</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+</section>
+   <h1> Smart equipment for fitness, health and sports facilities</h1>
+   <p>No hassle: equipment delivered to your door with high-quality installation by our experts (included in the price)</p>
+    <center>
+        <img src="img/img91.jpg" alt="Another Image" class="full-width-image"></center>
+    
+    
+    
+    <div class="flex-container">
+       
+        <div class="c1"> <b><br><br><br><br><br> MyRun</b><br>The Personalized workout at home<br>
+            <a href="Treadmiles.html"><button class="custom-button">DISCOVER MORE<br></button></a></div>
+        <div class="c2">
+            <img src="img/img21.jpg" alt="Image">
+        </div>
+    </div>
+
+
+    <div class="flex-container3">
+       
+        <div class="c1"> <b><br><br><br><br><br>Unica</b><br>A coplete gym in 1.5 m*m<br>
+            <a href="Homegym.html"><button class="custom-button">DISCOVER MORE<br></button></a></div>
+        <div class="c2">
+            <img src="img/img23.jpg" alt="Image">
+        </div>
+    </div>
+
+    <div class="content2">
+ <table>
+        <tr>
+            <td class="column1"><center>Power up your workouts</center></td>
+            <td class="column2"><p>Give your workout more variety than ever with our accessories, from warmup to cooldown. Increase your body’s capacities every day, from stability to mobility, from power to speed.</p> 
+               <a href="Tools.html"><button class="custom-button">BROWSE ALL TOOL</button></a>
+            </td>
+        </tr>
+    </table></div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="img/img24.jpg" alt="Card Image 1">
+            <h3>Hexagon Dumbbells</h3>
+            <p>Sturdy and versatile design to develop<br>strenght and power</p>
+        </div>
+        <div class="card">
+            <img src="img/img25.jpg" alt="Card Image 2">
+            <h3>Kettlebells</h3>
+            <p>Stylish weights for functional training</p>
+        </div>
+        <div class="card">
+            <img src="img/img26.jpg" alt="Card Image 3">
+            <h3>Bumper Plates</h3>
+            <p>Consistend drop absorpyion and bounce</p>
+        </div>
+        <div class="card">
+            <img src="img/img27.jpg" alt="Card Image 4">
+            <h3>Elastic Bands</h3>
+            <p>Light and versatile practicel handles</p>
+        </div>
+    </div>
+<br>
+    <hr class="footer-line">
+<br>
+<div class="browse-more">
+    <center><h2>Browse more equipment</h2></center>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="img/img28.jpg" alt="Card Image 1">
+           <a href="Treadmiles.html"><h3>Treadmills</h3></a>
+            
+        </div>
+        <div class="card">
+            <img src="img/img31.jpg" alt="Card Image 2">
+            <a href="Bikes.html"><h3>Bikes</h3></a>
+            
+        </div>
+        <div class="card">
+            <img src="img/img29.jpg" alt="Card Image 3">
+            <a href="Homegym.html"><h3>Multistation</h3></a>
+            
+        </div>
+        <div class="card">
+            <img src="img/img30.jpg" alt="Card Image 4">
+            <a href="Tools.html"><h3>Tools</h3></a>
+        
+        </div>
+    </div>
+
+  
+<!-----------   Footer section start  ------->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a class="links" href="index.html">Home</a>
+            <a class="links" href="training.html">Train With Us</a>
+            <a class="links" href="Shop.html">Store</a>
+            <a class="links" href="membership.html">Membership</a>
+            <a class="links" href="tutorial.html">Tutorials</a>
+            <a class="links" href="Aboutus.html">About US</a>
+         </div>
+
+         <div class="box">
+            <h3>Opening hours</h3>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>7:00am-10.30pm</i></p>
+            <p>monday: <i>Closed</i></p>
+        </div>
+        <div class="box">
+            <h3>Opening hours</h3>
+            <p><i class="fas fa-phone"></i>0111234567</p>
+            <p><i class="fas fa-phone"></i>0705654549</p>
+            <p><i class="fas fa-envelope"></i>elitexfitnesscenter@gmail.com</p>
+            <p><i class="fas fa-map"></i>Colombo 07,Sri Lanka</p>
+            <div class="share">
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-facebook-f"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-twitter"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-linkedin"></a>
+                <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-pinterest"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <form action="">
+                <input type="email" name="" class="email" placeholder="Enter your email" id="">
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+        </div>
+    </div>
+</section>
+<div class="credit">Created by <span>Csboys</span>| Copyright © EliteXFitnessCenter 2023. All right reserved.</div>
+<!-----------   Footer section END ------->
+
+    <script>
+        function changeBg(){
+           var navbar =document.getElementById('header');
+           var scrollValue=window.scrollY;
+           if(scrollValue<150){
+               navbar.classList.remove('bgcolor');
+           }
+           else{
+               navbar.classList.add('bgcolor')
+           }
+        }
+       window.addEventListener('scroll',changeBg); 
+    
+    </script>
+
+    <script>
+        function showAlert() {
+          // Show the alert pop-up
+          alert("Your details recorded");
+        }
+      </script>
+      
+      
+      <!------------------sign-up js part ------------>
+      
+      <script>
+       
+        const loginForm = document.querySelector('.login-form');
+        const signUpForm = document.querySelector('.signup-form');
+        const links = document.querySelector('.links');
+    
+        function toggleForms(event) {
+            event.preventDefault();
+            loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+            signUpForm.style.display = signUpForm.style.display === 'none' ? 'block' : 'none';
+        }
+    
+        links.addEventListener('click', toggleForms);
+    
+        // Close the form after successful form submission
+        const signUpFormElement = document.querySelector('.signup-form');
+    
+        signUpFormElement.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+    
+            const formData = new FormData(signUpFormElement);
+    
+            fetch('process_signup.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Handle successful form submission
+                    window.location.href = 'thank_you_page.html'; // Redirect to process_signup.php
+                    signUpFormElement.reset(); // Clear form inputs
+                    signUpFormElement.style.display = 'none'; // Hide the form after successful submission
+                } else {
+                    // Handle form submission error
+                    console.error('Error occurred during sign up.');
+                }
+            })
+            .catch(error => {
+                console.error('Error occurred during sign up:', error);
+            });
+        });
+    
+        // Get the login button element
+        const loginButton = document.getElementById('login-btn');
+    
+        // Add a click event listener to the login button
+        loginButton.addEventListener('click', function() {
+            // Toggle the login form
+            loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+            // Hide the signup form when showing the login form
+            signUpForm.style.display = 'none';
+        });
+    </script>
+    
+      
+      
+    <!--  Swipper js file-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!--  Custom js file link  -->    
+    <script>
+
+        let searchForm =document.querySelector('.search-form');
+        
+        document.querySelector('#search-btn').onclick=()=>{
+            searchForm.classList.toggle('active');
+            navbar.classList.remove('active');
+            loginForm.classList.remove('active');
+        }
+        
+        let navbar = document.querySelector('.navbar');
+        
+        document.querySelector('#menu-btn').onclick=()=>{
+            navbar.classList.toggle('active');
+            searchForm.classList.remove('active');
+            loginForm.classList.remove('active');
+        }
+        
+        
+        
+        window.onscroll = () =>{
+            searchForm.classList.remove('active');
+            navbar.classList.remove('active');
+        };
+        
+        window.onscroll = () =>{
+            menu.classList.remove('active');
+            navbar.classList.remove('active');
+        };
+        
+        
+        
+        var swiper = new Swiper(".home-slider", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        
+        
+          var swiper = new Swiper(".review-slider", {
+            spaceBetween: 20,
+            grabCursor:true,
+            loop:true,
+            autoplay:{
+              delay: 7500,
+              disableOnInteraction:false,
+            },
+            breakpoints:{
+              0:{
+                slidesPerView:1,
+              },
+              600:{
+                slidesPerView:2,
+              }
+            }
+              
+           
+          });
+        
+        </script>
+</body>
+</html>

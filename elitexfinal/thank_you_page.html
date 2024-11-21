@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)) , url("images/register.jpg");
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 30px; /* Adding padding to center all content */
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color:#00ff34;
+            font-size: 24px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto; /* Adding margin to center the image */
+        }
+        a{
+            color:white;
+            font-weight: bolder;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            img {
+                max-width: 80%;
+            }
+
+            a {
+                font-size: 18px;
+            }
+        }
+
+        /* Responsive styles for even smaller screens */
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="io.png" alt="Image Description">
+    <h1>Thank You for Signing Up!</h1>
+    <p>Now you can log in to the EliteX offcial website <a href="login.php">from here</a></p>
+</body>
+</html>

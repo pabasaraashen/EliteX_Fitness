@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="maincss.css">
+    <!--insert font awesome icon CDN link here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+   <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family:'Poppins',sans-serif;
+            box-sizing: border-box;
+            outline: none;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        :root{
+            --prime: #00ff34;
+        }
+        body{
+            background-color: #131b2b;
+        }
+
+        .nsbm p{
+          text-align: center;
+          padding: 20px;
+        }
+        .nsbm h2{
+          text-align: center;
+          padding: 20px;
+        }
+
+
+
+        .bgcolor{
+         transition: all 1s; 
+         background-color:black;
+         color: white;
+         border-bottom: 1px solid lightgray  ;
+        }
+        
+        .logo{
+            font-size: 2.8em;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .logo B{
+            color: var(--prime);
+        }
+        ol{
+            display: flex;
+            margin: auto 0;
+        }
+        ol li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        ol li a{
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        ol li:hover a{
+            color: var(--prime);
+        }
+        /*---common size for all section---*/
+        .view{
+            width: 100%;
+            min-height: 80vh;
+            position: relative;
+        }
+        /*---------Style Home Section--------------*/
+        .home{
+            display:flex;
+            min-height: 120vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: url(images/5.jpg);
+            background-size: cover;
+            background-position: center;
+            filter: brightness(50%);
+        }
+        
+        
+        .highlights{
+            width: 70%;
+            position: relative;
+            display: inline-block;
+            z-index: 11;
+        }
+        .highlights h3{
+            display: inline;
+            font-size: 2vw;
+            padding: 5px 20px;
+            font-weight: lighter;
+            text-transform: capitalize;
+            border-left: 6px solid var(--prime);
+        }
+        .highlights h1{
+            font-size: 5vw;
+            text-align: center;
+            font-weight: normal;
+        }
+        .highlights b{
+            color: var(--prime);
+            font-weight: 800;
+        }
+        .highlights .tagline{
+            color: #d7d7d7;
+            font-size: 1.2vw;
+            text-align: center;
+            font-weight: normal;
+        }
+        .highlights .join{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight:800;
+            padding: 5px 20px;
+            font-size: 1.5vw;
+            margin-top: 1.2em;
+            color: var(--prime);
+            border: 2px solid var(--prime);
+            border-radius: 50px;
+            background: transparent;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+        .highlights .join a{
+            text-decoration: none;
+        }
+        .highlights .join:hover{
+            color: #fff;
+            cursor: pointer;
+            letter-spacing: 1.5px;
+            background: var(--prime);
+        }
+        /*----common styles for all section----*/
+        .main{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .main h2{
+            font-size: 2.5vw;
+            position: relative;
+            text-align: center;
+            padding-top: 100px;
+            display: inline-block;
+        }
+        span{
+            color: var(--prime);
+        }
+        .main h2:before{
+            position: absolute;
+            content:'';
+            background: var(--prime);
+            height: 3px;
+            width: 30%;
+            right: -15px;
+            bottom: 0;
+            border-radius: 50px;
+        }
+        .main h6{
+            margin-top: 10px;
+            font-size: 13px;
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+        .content{
+            position: relative;
+            display: flex;
+            width: 100%;
+            padding: 0 30px;
+            justify-content: center;
+        }
+        
+        
+        
+        /*------------style promotion section--------------*/
+        .promotions .content{
+            flex-direction: column;
+        }
+        .promotions .content .row{
+            display: flex;
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            justify-content: center;
+        }
+        .promotions .content .row:nth-child(odd) .a{
+            order: 2;
+        }
+        .promotions .content .row .cols{
+            position: relative;
+            width: 600px;
+            padding: 20px 50px;
+        }
+        .promotions .content .row .cols .heading{
+            font-size: 2em;
+            color: #ff8502;
+            text-transform: capitalize;
+        }
+        .promotions .content .row:nth-child(odd) .cols .heading{
+            color: #02a3ff;
+        }
+        .promotions .content .row .cols .boxes{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+        .promotions .content .row .cols .boxes img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(80%);
+        }
+        .promotions .content .row .cols .boxes:hover img{
+            filter: brightness(100%);
+            transform: scale(1.08);
+        }
+        .promotions .content .row .cols p{
+            font-size: 1.2em;
+            
+        }
+        /*------------------make responsive-------------------*/
+        @media screen and (max-width:900px){
+          .highlights h3{
+            font-size: 3vw;
+            padding: 5px 10 px;
+            border-left: 3px solid var(--prime);
+          }
+          .highlights h1{
+            font-size: 12vw;
+          }
+          .highlights .tagline{
+            font-size: 3vw;
+          }
+          .highlights .join{
+            font-size: 1.8vw;
+            border: 1px solid var(--prime);
+          }
+          .main h2{
+            font-size: 1.5rem;
+          }
+          .main h6{
+            font-size: 10px;
+          }  
+          .membership .content .frame{
+            width: 350px;
+            padding: 15px 15px 40px 15px;
+            margin: 10px 5px;   
+          }
+          .membership .content .frame .box{
+            height: 200px;
+          }
+          .membership .content .frame .a{
+            border: 1.5px solid var(--prime);
+            padding: 3px 15px;
+          }
+          .membership .content .frame .card{
+            width: 320px;
+          }
+          .promotions .content .row{
+            flex-direction: column;
+          }
+          .promotions .content .row .cols{
+            width: 100%;
+          }
+          .promotions .content .row:nth-child(odd) .a{
+            order: 0;
+          }
+          .promotions .content .row .cols .heading{
+            font-size: 1.5em;
+          }
+          .promotions .content .row .cols p{
+            font-size: 13px;
+          }
+          .promotions .content .row .cols .boxes{
+            width: 90%;
+            margin: auto;
+          }
+        }
+
+        
+/*-------------------------------Sign-up form------------------*/
+
+  .signup-form {
+    position: absolute;
+    top: 100%; 
+    right: 2rem;
+    width: 25rem; 
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    display: none;
+  }
+
+  .signup-form.active {
+    display: block;
+    animation: fadeIn 0.4s linear;
+  }
+
+  .signup-form h3 {
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .signup-form .box {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-width: 0.1rem;
+    padding: 1rem 0; 
+    font-size: 1rem; 
+    color: black;
+    text-transform: none;
+    margin: 1rem 0;
+  }
+
+  .signup-form .btn {
+    width: 90%;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px 50px 50px 50px;
+  }
+
+  .signup-form .btn:hover {
+    background-color: #111;
+    color: white;
+  }
+
+    </style>
+    
+</head>
+<body>
+    
+   <!-- header section starts -->
+   <header id='header' class="header">
+
+    <a href="index.html" class="logo">
+        <img src="lo.png" alt="Logo" width="30" height="35"> 
+        &nbsp;Elite<span>&nbsp;X</span>
+    </a>
+
+    <nav id='navbar' class="navbar">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="training.html">Training</a>
+            </li>
+         <li><a href="membership.html">Membership</a></li>
+         <li><a href="tutorial.html">Tutorials</a></li>
+         <li><a href="Shop.html">Store</a>
+            
+         </li>
+         <li><a href="aboutus.html">About</a></li>
+         <li><a href="contactus.html">Contact</a></li>
+        </ul>
+     </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+ 
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <form action="process_signin.php" method="post" class="login-form">
+      <h3>Sign In</h3>
+      <input type="email" name="email" placeholder="Enter your email" class="box" required>
+      <input type="password" name="password" placeholder="Enter your password" class="box" required>
+      <div class="remember">
+          <input type="checkbox" name="remember_me" id="remember-me">
+          <label for="remember-me">Remember me</label>
+      </div>
+      <input type="submit" value="Sign In" class="btn">
+      <div class="links">
+          <a href="#">Forgot password</a>
+          <a href="#">Sign up</a>
+      </div>
+  </form>
+
+
+<!-- sign-up section starts -->
+  
+    <form action="process_signup.php" method="post" class="signup-form" style="display: none;">
+      <h3>Sign Up</h3>
+      <input type="text" name="name" placeholder="Enter your name" id="" class="box" required>
+      <input type="email" name="email" placeholder="Enter your email" id="" class="box" required>
+      <input type="text" name="nic_number" placeholder="Enter your NIC number" id="" class="box" required>
+      <input type="password" name="password" placeholder="Enter your password" id="" class="box">
+      <input type="submit" value="Sign Up" class="btn">
+    </form>
+
+ </header>
+
+
+
+<!--------------------------------Home Section----------------------------->
+<section id="home" class="home view">
+    <div class="highlights">
+        
+        <h3>elite<b>X</b> fitness</h3>
+        <h1><b>A</b>bout Us</h1><br>
+        <p class="tagline">
+            Top ranked fitness center in the island !
+        </p>
+        <button class="join"><a href="#promotions">See More</a></button>
+    </div>
+    <div class="banner">
+      
+    </div>
+    
+</section>
+
+
+
+
+<section id="promotions" class="promotions view">
+    <div class="main">
+        <h2><span>N</span>o. 01 Fitness Center</h2>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">We are ELiteX Fitness</div>
+               <br><br> <p>"Discover a world of wellness at our fitness center. Elevate your fitness journey with state-of-the-art equipment, expert trainers, and a supportive community. Your path to a healthier, stronger you begins here."</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="images/pic2.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+
+    <br>
+    <div class="nsbm">
+      <h2>About NSBM Content</h2>
+    <p>NSBM Green University, the nation’s premier degree-awarding institute, is the first of its kind in South Asia.
+      It is a government-owned self-financed institute that operates under the purview of the Ministry of Education.
+      As a leading educational centre in the country, NSBM has evolved into becoming a highly responsible higher education institute that offers unique opportunities and holistic education on par with international standards while promoting sustainable living. 
+      NSBM offers a plethora of undergraduate and postgraduate degree programmes under five faculties: Business, Computing, Engineering, Science and Postgraduate & Professional Advancement. 
+      These study programmes at NSBM are either its own programmes recognised by the University Grants Commission and the Ministry of Higher Education or world-class international programmes conducted in affiliation with top-ranked foreign universities such as University of Plymouth, UK, and Victoria University, Australia.  
+      Focused on producing competent professionals and innovative entrepreneurs for the increasingly globalising world, NSBM nurtures its graduates to become productive citizens of society with their specialisation ranging in study fields such as Business, Management, Computing, IT, Engineering, Science, Psychology, Nursing, Interior design, Quantity Surveying, Law and Multimedia. 
+      Inspired by the vision of being Sri Lanka’s best-performing graduate school and being recognised internationally, NSBM currently achieves approximately 3000 new enrollments per year and houses above 11,000 students reading over 50 degree programmes under 4 faculties. 
+      Moreover, over the years, NSBM Green University has gifted the nation with 14,000+ graduates and has proved its global presence with an alumni network spread all across the world. 
+      Nestling on a 40-acre land amidst the greenery and serenity in Pitipana, Homagama, NSBM Green University, is an ultra-modern university complex constructed with stateof-the-art facilities and amenities that provides the perfect setting for high-quality teaching, learning and research.</p>
+    <br><br>
+    <div class="link">
+      <a href="https://www.nsbm.ac.lk/story-of-nsbm/">
+          <center><img src="Images/nsbm.jpeg" alt="" ></center><br>
+          <center>GO TO THE LINK</center>
+      </a>
+  </div>
+ </div>
+    <br>
+    </section>
+
+<!-----------   Footer section start  ------->
+<section class="footer">
+  <div class="box-container">
+      <div class="box">
+          <h3>quick links</h3>
+          <a class="links" href="index.html">Home</a>
+          <a class="links" href="training.html">Train With Us</a>
+          <a class="links" href="Shop.html">Store</a>
+          <a class="links" href="membership.html">Membership</a>
+          <a class="links" href="tutorial.html">Tutorials</a>
+          <a class="links" href="Aboutus.html">About US</a>
+       </div>
+
+       <div class="box">
+          <h3>Opening hours</h3>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>7:00am-10.30pm</i></p>
+          <p>monday: <i>Closed</i></p>
+      </div>
+      <div class="box">
+          <h3>Opening hours</h3>
+          <p><i class="fas fa-phone"></i>0111234567</p>
+          <p><i class="fas fa-phone"></i>0705654549</p>
+          <p><i class="fas fa-envelope"></i>elitexfitnesscenter@gmail.com</p>
+          <p><i class="fas fa-map"></i>Colombo 07,Sri Lanka</p>
+          <div class="share">
+              <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-facebook-f"></a>
+              <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-twitter"></a>
+              <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-linkedin"></a>
+              <a href="https://www.facebook.com/nsbm.lk/" class="fab fa-pinterest"></a>
+          </div>
+      </div>
+
+      <div class="box">
+          <h3>Newsletter</h3>
+          <p>Subscribe for latest updates</p>
+          <form action="">
+              <input type="email" name="" class="email" placeholder="Enter your email" id="">
+              <input type="submit" value="Subscribe" class="btn">
+          </form>
+      </div>
+  </div>
+</section>
+<div class="credit">Created by <span>Csboys</span>| Copyright © EliteXFitnessCenter 2023. All right reserved.</div>
+<!-----------   Footer section END ------->
+<script>
+    function changeBg(){
+       var navbar =document.getElementById('header');
+       var scrollValue=window.scrollY;
+       if(scrollValue<150){
+           navbar.classList.remove('bgcolor');
+       }
+       else{
+           navbar.classList.add('bgcolor')
+       }
+    }
+   window.addEventListener('scroll',changeBg); 
+
+</script>
+
+
+<script>
+    function showAlert() {
+      // Show the alert pop-up
+      alert("Your details recorded");
+    }
+  </script>
+  
+  
+  <!------------------sign-up js part ------------>
+  
+  
+  <script>
+
+    const loginForm = document.querySelector('.login-form');
+    const signUpForm = document.querySelector('.signup-form');
+    const links = document.querySelector('.links');
+
+    function toggleForms(event) {
+        event.preventDefault();
+        loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+        signUpForm.style.display = signUpForm.style.display === 'none' ? 'block' : 'none';
+    }
+
+    links.addEventListener('click', toggleForms);
+
+    // Close the form after successful form submission
+    const signUpFormElement = document.querySelector('.signup-form');
+
+    signUpFormElement.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const formData = new FormData(signUpFormElement);
+
+        fetch('process_signup.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle successful form submission
+                window.location.href = 'thank_you_page.html'; // Redirect to process_signup.php
+                signUpFormElement.reset(); // Clear form inputs
+                signUpFormElement.style.display = 'none'; // Hide the form after successful submission
+            } else {
+                // Handle form submission error
+                console.error('Error occurred during sign up.');
+            }
+        })
+        .catch(error => {
+            console.error('Error occurred during sign up:', error);
+        });
+    });
+
+    // Get the login button element
+    const loginButton = document.getElementById('login-btn');
+
+    // Add a click event listener to the login button
+    loginButton.addEventListener('click', function() {
+        // Toggle the login form
+        loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+        // Hide the signup form when showing the login form
+        signUpForm.style.display = 'none';
+    });
+</script>
+
+  
+<!--  Swipper js file-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!--  Custom js file link  -->    
+<script>
+
+    let searchForm =document.querySelector('.search-form');
+    
+    document.querySelector('#search-btn').onclick=()=>{
+        searchForm.classList.toggle('active');
+        navbar.classList.remove('active');
+        loginForm.classList.remove('active');
+    }
+    
+    let navbar = document.querySelector('.navbar');
+    
+    document.querySelector('#menu-btn').onclick=()=>{
+        navbar.classList.toggle('active');
+        searchForm.classList.remove('active');
+        loginForm.classList.remove('active');
+    }
+    
+    
+    
+    window.onscroll = () =>{
+        searchForm.classList.remove('active');
+        navbar.classList.remove('active');
+    };
+    
+    window.onscroll = () =>{
+        menu.classList.remove('active');
+        navbar.classList.remove('active');
+    };
+    
+    
+    
+    var swiper = new Swiper(".home-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    
+    
+      var swiper = new Swiper(".review-slider", {
+        spaceBetween: 20,
+        grabCursor:true,
+        loop:true,
+        autoplay:{
+          delay: 7500,
+          disableOnInteraction:false,
+        },
+        breakpoints:{
+          0:{
+            slidesPerView:1,
+          },
+          600:{
+            slidesPerView:2,
+          }
+        }
+          
+       
+      });
+    
+    </script>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
